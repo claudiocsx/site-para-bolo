@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo{
+    font-family: 'Cookie', cursive;
+    color: rgb(237, 123, 82);
+    font-size: 3rem;
+}
+
+.navMenu{
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navItem{
+    margin-left: 20px;
+    color: white;
+    font-weight: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.linha{
+    display: none;
+}
+
+.navItem:hover{
+    color: rgba(238, 11, 117, 0.892);
+    transition: 2s all;
+}
+
+.boloContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bolos{
+    width: 400px;
+    margin: 20px;
+    background-image: url(/img/fundos-70-x-70-centimetros-madeira-Fundo-Fotografico-Madeira-em-Tecido-M203-1598438394757.png);
+}
+
+.wrapper{
+    width: 95%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boloTitle{
+    color: blue;
+    font-size: 40px;
+    font-family: 'Cookie', cursive;
+}
+
+.boloImg{
+   width: 100%;
+   height: 210px; 
+}
+
+.description{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.descriptionBolo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: chocolate;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.boloBtn{
+    width: 90px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+   
+    .navMenu{
+        display: block;
+        text-align: center;
+    }
+    .navItem{
+       font-size: 30px;
+    }
+    
+    .linha{
+        display: flex;
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        background: coral;
+    }
+}
