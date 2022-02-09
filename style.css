@@ -9,6 +9,16 @@ header{
     padding: 20px;
 }
 
+footer{
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: coral;
+}
+
 .logo{
     font-family: 'Cookie', cursive;
     color: rgb(237, 123, 82);
@@ -20,6 +30,7 @@ header{
     display: flex;
     justify-content: center;
     padding: 20px;
+    transition: .03s ease-in;
 }
 
 .navItem{
@@ -42,7 +53,7 @@ header{
 
 .boloContainer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -95,12 +106,60 @@ header{
     cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+.menu-bar{
+    width: 30px;
+    height: 20px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+    display: block;
+    display: none;
+    transition: .03s ease;
+}
+
+.bar{
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: coral;
+}
+
+#bar1{
+    transform: translateY(-4px);
+}
+
+#bar3{
+    transform: translateY(4px);
+}
+
+.change #bar1{
+    transform: translateY(-4px) rotateZ(-135deg);
+}
+
+.change #bar3{
+    transform: translateY(-6px) rotate(135deg);
+}
+
+.change #bar2{
+    opacity: 0;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
    
     .navMenu{
         display: block;
         text-align: center;
+        height: 20vh;
+        opacity: 0;
+        transition: 0.3s ease-in;
     }
+
+    .change{
+        opacity: 3;
+    }
+    
     .navItem{
        font-size: 30px;
     }
@@ -110,5 +169,18 @@ header{
         border: 0;
         border-bottom: 1px dashed #ccc;
         background: coral;
+    }
+
+    .boloContainer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-bar{
+        display: block;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        margin:10px;
     }
 }
